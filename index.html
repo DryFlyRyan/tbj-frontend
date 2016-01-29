@@ -15,19 +15,28 @@
       <div class="block-container flex-row">
 
       <div class="block-container flex-col" ng-controller="playGame">
-          <button type="button" class="go-btn" name="button" ng-click="robBank($rootScope.chance)">START JOB</button>
+          <button type="button" class="go-btn" name="button" ng-click="robBank($root.chance)">START JOB</button>
       </div>
     </div>
   </header>
   <main>
+    <div class="stats-container flex-col" ng-controller="playGame">
+      <div class="stats-box win-box ng-hide flex-col" ng-show="$root.win">
+        <h1>You Robbed the Bank!</h1>
+        <h3>You took {{$root.reward | currency}}</h3>
+      </div>
+      <div class="stats-box lose-box ng-hide flex-col" ng-show="$root.lose">
+        <h1>You failed to rob the bank!</h1>
+      </div>
+    </div>
     <div class="stats-container flex-col" ng-controller="StatsController">
       <div class="stats-box flex-row">
         <div class="success-chance flex-col-center">
-          <h1>{{$root.chance * 100}}%</h1>
+          <h1>{{$root.chance * 100 | number: 2}}%</h1>
           <h3>CHANCE OF SUCCESS</h3>
         </div>
         <div class="reward-estimate flex-col-center">
-          <h1>$55,000</h1>
+          <h1>{{$root.reward | currency}}</h1>
           <h3>Estimated Take Per Thief</h3>
 
         </div>
@@ -56,7 +65,7 @@
                 </div>
               </div>
 
-              <div class="stat-window flex-col">
+              <!-- <div class="stat-window flex-col">
                 <div class="inset-shadow-right stat-bar">
                   <div class="stat-fill inset-shadow-right">
 
@@ -73,7 +82,7 @@
                   </div>
                 </div>
 
-              </div>
+              </div> -->
             </div>
           </a>
         <!-- End Thief Card -->
@@ -96,7 +105,7 @@
                 </p>
               </div>
             </div>
-            <div class="stat-window flex-col">
+            <!-- <div class="stat-window flex-col">
               <div class="inset-shadow-right stat-bar">
                 <div class="stat-fill inset-shadow-right">
 
@@ -113,7 +122,7 @@
                   </div>
                 </div>
 
-              </div>
+              </div> -->
             </div>
           </a>
 

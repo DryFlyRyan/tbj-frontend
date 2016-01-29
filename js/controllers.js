@@ -1,13 +1,21 @@
 app.controller("StatsController", function($scope, $rootScope) {
   $rootScope.chance = 0;
+  $rootScope.reward = 0;
   $rootScope.successCalculator = function(thief, target) {
-    var chances = (((thief.explosives / 3)+(thief.marksmanship / 3) + (thief.charisma / 3)) / target.security) + (((thief.driving / 2) + (thief.stealth  / 2)) / (10 - target.accessibility)) / 2;
-    if (chances > 1) {
-      chances = 1;
-      $rootScope.chance = chances;
-    } else {
-      $rootScope.chance = chances;
+    var security = (((thief.explosives / 3) + (thief.marksmanship / 3) + (thief.charisma / 3)) /
+    target.security)
+    var accessibility =
+    (((thief.driving / 2) + (thief.stealth  / 2)) / (10 - target.accessibility)) / 2;
+    if (security > 1) {
+      security = 1
     }
+    if (accessibility > 1) {
+      accessibility = 1
+    }
+    var chances = (security + accessibility) / 2
+    console.log(chances);
+    $rootScope.chance = chances;
+    $rootScope.reward = (target.reward * 10000) * ((thief.safe_cracking / 10))
   };
   $rootScope.thief = {
     name: "",
@@ -28,7 +36,6 @@ app.controller("StatsController", function($scope, $rootScope) {
     reward: 0,
     accessibility: 0
   }
-
 })
 
 app.controller('ThievesController', function($scope, $rootScope, $http){
@@ -58,11 +65,14 @@ app.controller('BanksController', function($scope, $rootScope, $http){
 app.controller('playGame', function($scope, $rootScope){
   $scope.robBank = function(chances) {
     var roll = Math.random()
+    console.log(roll, chances);
     if (roll <= chances) {
       $rootScope.win = true;
+      $rootScope.lose = false;
     } else {
       $rootScope.win = false;
+      $rootScope.lose = true;
     }
-  }
-  $rootScope.win = null;
+    console.log($rootScope.win);
+  }  
 })
