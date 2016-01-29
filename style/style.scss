@@ -136,11 +136,13 @@ html, body {
 }
 
 .mugshot-img {
-  max-width: 100px;
+  width: 100px;
+  height: 200px;
 }
 
 .target-img {
   max-width: 150px;
+  max-height: auto;
 }
 
 .stat-button {
