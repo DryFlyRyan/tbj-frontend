@@ -13,100 +13,13 @@
     <div class="flex-col header-container drop-shadow">
       <h1>THE BANK JOB</h1>
       <div class="block-container flex-row">
-        <button class="action-btn" type="button" name="button">PICK YOUR TEAM</button>
-        <button class="action-btn" type="button" name="button">PICK YOUR TARGET</button>
 
-      </div>
       <div class="block-container flex-col">
           <button type="button" class="go-btn" name="button">START JOB</button>
       </div>
     </div>
   </header>
   <main>
-    <div class="dashboard-container flex-row-center">
-      <div class="thief-container flex-col-wrap">
-
-        <!-- Thief Card -->
-        <a href="" class="thief-anchor">
-          <div class="thief-card drop-shadow-right">
-            <div class="flex-row">
-
-              <div class="mugshot-container flex-col">
-                <a href="thief-page"><img class="mugshot-img drop-shadow-right" src="https://s-media-cache-ak0.pinimg.com/236x/bf/5e/d9/bf5ed9538dab33ddb28c691750b90967.jpg" alt="" />
-                </a>
-              </div>
-              <div class="text-container flex-col">
-                <h2>Thief Name</h2>
-                <p>
-                  These are where the theif descriptions will go eventually. I'm going to write a bit more now.
-                </p>
-
-              </div>
-            </div>
-            <button type="button" class="stats-button" name="button">Statistics</button>
-            <div class="stat-window flex-col">
-              <div class="inset-shadow-right stat-bar">
-                <div class="stat-fill inset-shadow-right">
-
-                </div>
-              </div>
-              <div class="inset-shadow-right stat-bar">
-                <div class="stat-fill inset-shadow-right">
-
-                </div>
-              </div>
-              <div class="inset-shadow-right stat-bar">
-                <div class="stat-fill inset-shadow-right">
-
-                </div>
-              </div>
-            </div>
-          </div>
-
-        </a>
-        <!-- End Thief Card -->
-
-
-      </div>
-      <div class="target-container flex-col-wrap">
-
-        <a href="" class="target-anchor">
-          <div class="target-card drop-shadow-right">
-            <div class="flex-row">              
-              <div class="target-img-container flex-col">
-                <a href="thief-page"><img class="target-img drop-shadow-right" src="http://suburban-poverty.com/wp-content/uploads/2011/11/bank_postcard_photo.jpg" alt="" />
-                </a>
-              </div>
-              <div class="text-container flex-col">
-                <h2>Target Name</h2>
-                <p>
-                  These are where the target descriptions will go eventually. I'm going to write a bit more now.
-                </p>
-              </div>
-            </div>
-
-            <div class="stat-window flex-col">
-              <div class="inset-shadow-right stat-bar">
-                <div class="stat-fill inset-shadow-right">
-
-                </div>
-              </div>
-              <div class="inset-shadow-right stat-bar">
-                <div class="stat-fill inset-shadow-right">
-
-                </div>
-              </div>
-              <div class="inset-shadow-right stat-bar">
-                <div class="stat-fill inset-shadow-right">
-
-                </div>
-              </div>
-            </div>
-          </div>
-        </a>
-
-      </div>
-    </div>
     <div class="stats-container flex-col">
       <div class="stats-box flex-row">
         <div class="success-chance flex-col-center">
@@ -116,10 +29,100 @@
         <div class="reward-estimate flex-col-center">
           <h1>$55,000</h1>
           <h3>Estimated Take Per Thief</h3>
+
         </div>
 
       </div>
     </div>
+    <div class="dashboard-container flex-row">
+
+      <div class="thief-container flex-col-wrap" ng-controller="ThievesController">
+
+        <div class=""
+        ng-repeat="thief in thieves track by $index">
+          <!-- Thief Card -->
+          <a href="" class="thief-anchor">
+            <div class="thief-card drop-shadow-right"  >
+              <div class="flex-row" >
+                <div class="mugshot-container flex-col">
+                  <a href="thief-page"><img class="mugshot-img drop-shadow-right" ng-src="{{thief.image}}" alt="" />
+                  </a>
+                </div>
+                <div class="text-container flex-col">
+                  <h2>{{thief.name}}</h2>
+                  <p>
+                    These are where the theif descriptions will go eventually. I'm going to write a bit more now.
+                  </p>
+                </div>
+              </div>
+
+              <div class="stat-window flex-col">
+                <div class="inset-shadow-right stat-bar">
+                  <div class="stat-fill inset-shadow-right">
+
+                  </div>
+                </div>
+                <div class="inset-shadow-right stat-bar">
+                  <div class="stat-fill inset-shadow-right">
+
+                  </div>
+                </div>
+                <div class="inset-shadow-right stat-bar">
+                  <div class="stat-fill inset-shadow-right">
+
+                  </div>
+                </div>
+
+              </div>
+            </div>
+          </a>
+        <!-- End Thief Card -->
+
+        </div>
+
+    </div>
+    <div ng-controller="BanksController" class="target-container flex-col-wrap">
+      <div  ng-repeat="bank in banks track by $index">
+        <a href="" class="target-anchor">
+          <div class="target-card drop-shadow-right">
+            <div class="flex-row">
+              <div class="target-img-container flex-col">
+                <a href="thief-page"><img class="target-img drop-shadow-right" ng-src="{{bank.image}}" alt="" />
+                </a>
+              </div>
+              <div class="text-container flex-col">
+                <h2>{{bank.name}}</h2>
+                <p>
+                  These are where the target descriptions will go eventually. I'm going to write a bit more now.
+                </p>
+              </div>
+            </div>
+            <div class="stat-window flex-col">
+              <div class="inset-shadow-right stat-bar">
+                <div class="stat-fill inset-shadow-right">
+
+                </div>
+              </div>
+              <div class="inset-shadow-right stat-bar">
+                <div class="stat-fill inset-shadow-right">
+
+                </div>
+              </div>
+              <div class="inset-shadow-right stat-bar">
+                  <div class="stat-fill inset-shadow-right">
+
+                  </div>
+                </div>
+
+              </div>
+            </div>
+          </a>
+
+        </div>
+      </div>
+
+    </div>
+
 
   </main>
   <footer>

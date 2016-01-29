@@ -52,6 +52,7 @@ html, body {
 .dashboard-container {
   height: 100%;
   width: 100%;
+  overflow: scroll;
 }
 
 .block-container {
@@ -67,6 +68,7 @@ html, body {
   width: 40%;
   height: 100%;
   flex-grow: 1;
+  overflow: scroll;
 }
 
 .target-container {
@@ -74,6 +76,7 @@ html, body {
   width: 50%;
   height: 100%;
   flex-grow: 1;
+  overflow: scroll;
 }
 
 .target-img-container,
@@ -85,8 +88,7 @@ html, body {
 .stats-container {
   height: 30%;
   width: 100%;
-  position: absolute;
-  bottom: 0;
+  margin-top: 1.5%;
 }
 
 .success-chance {
