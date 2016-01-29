@@ -85,6 +85,11 @@ html, body {
   margin: 1%;
 }
 
+.mugshot-container {
+  height: 100px;
+  width: 30%;
+}
+
 .stats-container {
   height: 30%;
   width: 100%;
@@ -102,6 +107,11 @@ html, body {
 }
 
 /* Element Styling */
+
+.thief-anchor {
+  text-decoration: none;
+  color: black;
+}
 
 .thief-card {
   width: 90%;
@@ -136,8 +146,8 @@ html, body {
 }
 
 .mugshot-img {
-  width: 100px;
-  height: 200px;
+  max-width: 100px;
+  max-height: 100px;
 }
 
 .target-img {

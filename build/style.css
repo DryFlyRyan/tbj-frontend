@@ -70,6 +70,10 @@ html, body {
 .text-container {
   margin: 1%; }
 
+.mugshot-container {
+  height: 100px;
+  width: 30%; }
+
 .stats-container {
   height: 30%;
   width: 100%;
@@ -84,6 +88,10 @@ html, body {
   flex-grow: 1; }
 
 /* Element Styling */
+.thief-anchor {
+  text-decoration: none;
+  color: black; }
+
 .thief-card {
   width: 90%;
   margin: 1%;
@@ -111,8 +119,8 @@ html, body {
   border-radius: 25px; }
 
 .mugshot-img {
-  width: 100px;
-  height: 200px; }
+  max-width: 100px;
+  max-height: 100px; }
 
 .target-img {
   max-width: 150px;
