@@ -48,7 +48,7 @@ html, body {
   width: 50%;
 }
 
-
+.target-img-container,
 .mugshot-container,
 .text-container {
   margin: 1%;
@@ -97,6 +97,31 @@ html, body {
   max-width: 150px;
 }
 
+.stat-button {
+  float: right;
+  margin-right: 5%;
+  margin-bottom: 2%;
+}
+
+.stat-bar {
+  width: 90%;
+  height: 25px;
+  border-radius: 25px;
+  background: #F5F5F5;
+  margin: 1% 0;
+  overflow: hidden;
+}
+
+.stat-fill {
+  height: 100%;
+  width: 60%;
+  background: blue;
+
+}
+
+.stat-window {
+  clear: both;
+}
 /* Shadowing */
 
 .drop-shadow {
