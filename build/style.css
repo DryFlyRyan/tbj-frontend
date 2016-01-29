@@ -1,29 +1,49 @@
 html, body {
   margin: 0;
   padding: 0;
-  font-family: "Merriweather", Georgia, serif; }
+  font-family: "Merriweather", Georgia, serif;
+  height: 100vh;
+  width: 100vw; }
 
 /* Flexy Stuff */
+.flex-row {
+  display: flex;
+  flex-flow: row;
+  justify-content: center;
+  align-items: flex-start; }
+
+.flex-row-center {
+  display: flex;
+  flex-flow: row;
+  justify-content: flex-start;
+  align-items: flex-start;
+  align-content: stretch; }
+
 .flex-col {
   display: flex;
   flex-flow: column nowrap;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center; }
 
 .flex-col-wrap {
   display: flex;
   flex-flow: column wrap;
-  justify-content: space-around;
+  justify-content: flex-start;
   align-items: center;
   align-content: flex-start; }
 
-.flex-row {
+.flex-col-center {
   display: flex;
-  flex-flow: row;
+  flex-flow: column;
   justify-content: center;
-  align-items: center; }
+  align-items: center;
+  align-content: center; }
 
 /* Containers */
+.dashboard-container {
+  height: 100%;
+  width: 100%; }
+
 .block-container {
   width: 100%; }
 
@@ -32,28 +52,45 @@ html, body {
 
 .thief-container {
   margin-top: 1.5%;
-  width: 40%; }
+  width: 40%;
+  height: 100%;
+  flex-grow: 1; }
 
 .target-container {
   margin-top: 1.5%;
-  width: 50%; }
+  width: 50%;
+  height: 100%;
+  flex-grow: 1; }
 
 .target-img-container,
 .mugshot-container,
 .text-container {
   margin: 1%; }
 
+.stats-container {
+  height: 30%;
+  width: 100%;
+  position: absolute;
+  bottom: 0; }
+
+.success-chance {
+  height: 100%;
+  flex-grow: 1; }
+
+.reward-estimate {
+  height: 100%;
+  flex-grow: 1; }
+
 /* Element Styling */
 .thief-card {
-  width: 30%;
-  min-width: 450px;
+  width: 90%;
   margin: 1%;
   border: 1px solid black; }
 
 .target-card {
-  width: 30%;
-  min-width: 600px;
-  border: 1px solid blue; }
+  width: 90%;
+  margin: 1%;
+  border: 1px solid black; }
 
 .text-container > h2 {
   margin: 0; }
@@ -97,6 +134,12 @@ html, body {
 
 .stat-window {
   clear: both; }
+
+.stats-box {
+  width: 90%;
+  min-height: 200px;
+  height: 90%;
+  border: 1px solid black; }
 
 /* Shadowing */
 .drop-shadow {

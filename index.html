@@ -23,7 +23,7 @@
     </div>
   </header>
   <main>
-    <div class="dashboard-container flex-row">
+    <div class="dashboard-container flex-row-center">
       <div class="thief-container flex-col-wrap">
 
         <!-- Thief Card -->
@@ -71,23 +71,51 @@
       <div class="target-container flex-col-wrap">
 
         <a href="" class="target-anchor">
-          <div class="target-card flex-row drop-shadow-right">
-            <div class="target-img-container flex-col">
-              <a href="thief-page"><img class="target-img drop-shadow-right" src="http://suburban-poverty.com/wp-content/uploads/2011/11/bank_postcard_photo.jpg" alt="" />
-              </a>
+          <div class="target-card drop-shadow-right">
+            <div class="flex-row">              
+              <div class="target-img-container flex-col">
+                <a href="thief-page"><img class="target-img drop-shadow-right" src="http://suburban-poverty.com/wp-content/uploads/2011/11/bank_postcard_photo.jpg" alt="" />
+                </a>
+              </div>
+              <div class="text-container flex-col">
+                <h2>Target Name</h2>
+                <p>
+                  These are where the target descriptions will go eventually. I'm going to write a bit more now.
+                </p>
+              </div>
             </div>
-            <div class="text-container flex-col">
-              <h2>Target Name</h2>
-              <p>
-                These are where the target descriptions will go eventually. I'm going to write a bit more now.
-              </p>
+
+            <div class="stat-window flex-col">
+              <div class="inset-shadow-right stat-bar">
+                <div class="stat-fill inset-shadow-right">
+
+                </div>
+              </div>
+              <div class="inset-shadow-right stat-bar">
+                <div class="stat-fill inset-shadow-right">
+
+                </div>
+              </div>
+              <div class="inset-shadow-right stat-bar">
+                <div class="stat-fill inset-shadow-right">
+
+                </div>
+              </div>
             </div>
           </div>
         </a>
 
       </div>
-      <div class="stats-container">
-
+    </div>
+    <div class="stats-container flex-col">
+      <div class="stats-box flex-row">
+        <div class="success-chance flex-col-center">
+          <h1>55%</h1>
+          <h3>CHANCE OF SUCCESS</h3>
+        </div>
+        <div class="reward-estimate flex-col-center">
+          <h1>$55,000</h1>
+          <h3>Estimated Take Per Thief</h3>
         </div>
 
       </div>
