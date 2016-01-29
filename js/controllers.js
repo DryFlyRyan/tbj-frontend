@@ -1,7 +1,13 @@
 app.controller("StatsController", function($scope, $rootScope) {
   $rootScope.chance = 0;
   $rootScope.successCalculator = function(thief, target) {
-    $rootScope.chance = (((thief.explosives / 3)+(thief.marksmanship / 3) + (thief.charisma / 3)) / target.security) + (((thief.driving / 2) + (thief.stealth  / 2)) / (10 - target.accessibility)) / 2;
+    var chances = (((thief.explosives / 3)+(thief.marksmanship / 3) + (thief.charisma / 3)) / target.security) + (((thief.driving / 2) + (thief.stealth  / 2)) / (10 - target.accessibility)) / 2;
+    if (chances > 1) {
+      chances = 1;
+      $rootScope.chance = chances;
+    } else {
+      $rootScope.chance = chances;
+    }
   };
   $rootScope.thief = {
     name: "",
