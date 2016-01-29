@@ -1,4 +1,4 @@
-var app = angular.module("movieDB", ['ngRoute']);
+var app = angular.module("bankJob", ['ngRoute']);
 
 // app.config(function($routeProvider, $locationProvider) {
 //   $routeProvider
