@@ -43,7 +43,7 @@ app.controller('ThievesController', function($scope, $rootScope, $http){
   }
 });
 
-app.controller('BanksController', function($scope, $http){
+app.controller('BanksController', function($scope, $rootScope, $http){
   $http.get('https://bankjobapi.herokuapp.com/banks').then(function(data){
     $scope.banks = data.data;
     console.log('banks', data.data);

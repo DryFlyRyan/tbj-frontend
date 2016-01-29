@@ -88,6 +88,7 @@ html, body {
   flex-grow: 1; }
 
 /* Element Styling */
+.target-anchor,
 .thief-anchor {
   text-decoration: none;
   color: black; }
@@ -123,8 +124,8 @@ html, body {
   max-height: 100px; }
 
 .target-img {
-  max-width: 150px;
-  max-height: auto; }
+  max-width: 100px;
+  max-height: 75px; }
 
 .stat-button {
   float: right;
